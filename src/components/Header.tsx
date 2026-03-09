@@ -64,7 +64,7 @@ export function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm font-medium text-deep-teal/70 hover:text-teal transition-colors relative group"
+                  className="text-[13px] font-medium text-deep-teal/70 hover:text-teal transition-colors relative group"
                 >
                   {link.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-teal rounded-full transition-all group-hover:w-full" />

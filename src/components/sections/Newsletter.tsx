@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 
 export function Newsletter() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-60px" });
+  const isInView = useInView(ref, { once: true, margin: "-40px" });
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
@@ -15,17 +15,17 @@ export function Newsletter() {
   };
 
   return (
-    <section ref={ref} className="py-20 lg:py-28 bg-cream">
+    <section ref={ref} className="py-16 lg:py-20 bg-cream">
       <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="font-petrona text-2xl sm:text-3xl font-bold text-deep-teal mb-3">
+          <h2 className="font-petrona text-2xl sm:text-3xl font-bold text-deep-teal mb-2">
             Stay close
           </h2>
-          <p className="text-sm text-deep-teal/45 mb-8">
+          <p className="text-sm text-deep-teal/40 mb-6">
             New companions, wellness tips, and exclusive offers. No spam, just warmth.
           </p>
 

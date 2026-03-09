@@ -2,26 +2,27 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-[100svh] flex items-center overflow-hidden">
       {/* Mesh gradient background */}
       <div className="absolute inset-0">
         <div
           className="absolute inset-0"
           style={{
             background: `
-              radial-gradient(ellipse 80% 60% at 20% 40%, rgba(16, 132, 116, 0.15) 0%, transparent 60%),
-              radial-gradient(ellipse 60% 80% at 80% 30%, rgba(255, 207, 199, 0.2) 0%, transparent 50%),
-              radial-gradient(ellipse 70% 50% at 50% 80%, rgba(237, 245, 245, 0.4) 0%, transparent 60%),
+              radial-gradient(ellipse 80% 60% at 20% 40%, rgba(16, 132, 116, 0.12) 0%, transparent 60%),
+              radial-gradient(ellipse 60% 80% at 80% 30%, rgba(255, 207, 199, 0.18) 0%, transparent 50%),
+              radial-gradient(ellipse 70% 50% at 50% 80%, rgba(237, 245, 245, 0.3) 0%, transparent 60%),
               linear-gradient(180deg, #fff8e1 0%, #fdfaf0 100%)
             `,
           }}
         />
         {/* Organic blobs */}
         <div
-          className="absolute top-[10%] left-[5%] w-[500px] h-[500px] opacity-[0.07]"
+          className="absolute top-[10%] left-[5%] w-[500px] h-[500px] opacity-[0.06]"
           style={{
             background: "radial-gradient(circle, #108474, transparent 70%)",
             animation: "blob-morph 20s ease-in-out infinite",
@@ -29,7 +30,7 @@ export function Hero() {
           }}
         />
         <div
-          className="absolute bottom-[10%] right-[10%] w-[400px] h-[400px] opacity-[0.05]"
+          className="absolute bottom-[10%] right-[10%] w-[400px] h-[400px] opacity-[0.04]"
           style={{
             background: "radial-gradient(circle, #ffcfc7, transparent 70%)",
             animation: "blob-morph 25s ease-in-out infinite reverse",
@@ -39,7 +40,7 @@ export function Hero() {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center py-32 lg:py-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center py-28 lg:py-0">
           {/* Content */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -51,7 +52,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-block font-poppins text-[10px] font-semibold uppercase tracking-[0.3em] text-teal/80 mb-6"
+              className="inline-block font-poppins text-[11px] font-semibold uppercase tracking-[0.25em] text-teal mb-5"
             >
               Weighted for calm
             </motion.span>
@@ -60,7 +61,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.7 }}
-              className="font-petrona text-5xl sm:text-6xl lg:text-7xl font-bold text-deep-teal leading-[1.05] mb-6"
+              className="font-petrona text-[2.75rem] sm:text-6xl lg:text-[4.25rem] font-bold text-deep-teal leading-[1.05] mb-5"
             >
               The feeling of{" "}
               <span className="italic text-teal">being held</span>,{" "}
@@ -71,7 +72,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="text-base sm:text-lg text-deep-teal/60 leading-relaxed mb-8 max-w-md"
+              className="text-base sm:text-[17px] text-deep-teal/55 leading-relaxed mb-7 max-w-md"
             >
               Weighted stuffed animals designed for anxiety relief, better sleep, 
               and the simple comfort of something that holds you back.
@@ -81,7 +82,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="flex flex-wrap gap-4"
+              className="flex flex-wrap gap-3"
             >
               <Link
                 href="/collections/all-hugz"
@@ -105,7 +106,7 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1 }}
-              className="flex items-center gap-3 mt-10"
+              className="flex items-center gap-3 mt-8"
             >
               <div className="flex">
                 {[...Array(5)].map((_, i) => (
@@ -120,31 +121,66 @@ export function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Hero visual — floating product with organic shape */}
+          {/* Hero image — real product */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4, duration: 1, ease: "easeOut" }}
-            className="relative hidden lg:flex justify-center items-center"
+            transition={{ delay: 0.3, duration: 1, ease: "easeOut" }}
+            className="relative flex justify-center items-center"
           >
+            {/* Organic blob behind image */}
             <div
-              className="absolute w-[420px] h-[420px] opacity-20"
+              className="absolute w-[90%] aspect-square opacity-15"
               style={{
-                background: "linear-gradient(135deg, #108474, #ffcfc7)",
-                animation: "blob-morph 15s ease-in-out infinite",
+                background: "linear-gradient(135deg, #108474, #ffcfc7, #edf5f5)",
+                animation: "blob-morph 18s ease-in-out infinite",
                 borderRadius: "60% 40% 30% 70% / 60% 30% 70% 40%",
               }}
             />
+
+            {/* Product image */}
             <div
-              className="relative w-[380px] h-[380px] rounded-[40%_60%_50%_50%/40%_50%_60%_50%] overflow-hidden shadow-2xl"
-              style={{ animation: "float 6s ease-in-out infinite" }}
+              className="relative w-full max-w-[480px] aspect-square"
+              style={{ animation: "float 8s ease-in-out infinite" }}
             >
-              {/* Product image placeholder — will be replaced with actual Shopify image */}
-              <div className="absolute inset-0 bg-gradient-to-br from-teal/10 via-cream to-soft-pink/20 flex items-center justify-center">
-                <svg width="120" height="120" viewBox="0 0 120 120" fill="none" className="opacity-30">
-                  <path d="M60 110s-45-28-45-60C15 28 28.6 15 45 15c9 0 16.5 4.5 15 12-1.5-7.5 6-12 15-12 16.4 0 30 13 30 35 0 32-45 60-45 60z" fill="#108474"/>
-                </svg>
+              <div className="absolute inset-4 rounded-[30%_70%_60%_40%/50%_40%_60%_50%] overflow-hidden shadow-2xl shadow-deep-teal/10">
+                <Image
+                  src="https://cdn.shopify.com/s/files/1/0666/9130/1682/files/Horse_Tube_1fcceba2-0fc1-4732-8c41-154580c739a5.jpg?v=1771395856"
+                  alt="Chestnut the Horse — a weighted stuffed companion"
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="(max-width: 768px) 90vw, 480px"
+                />
               </div>
+
+              {/* Floating badge */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 1.2, type: "spring", stiffness: 200 }}
+                className="absolute -bottom-2 -left-2 sm:bottom-4 sm:left-0 bg-white rounded-2xl px-4 py-3 shadow-lg shadow-deep-teal/5"
+              >
+                <div className="flex items-center gap-2">
+                  <svg width="20" height="20" viewBox="0 0 32 32" fill="#108474">
+                    <path d="M16 28s-12-7.4-12-16C4 7.6 7.6 4 12 4c2.4 0 4.4 1.2 4 3.2C15.6 5.2 17.6 4 20 4c4.4 0 8 3.6 8 8 0 8.6-12 16-12 16z"/>
+                  </svg>
+                  <div>
+                    <p className="font-petrona text-xs font-semibold text-deep-teal">Weighted 2 lbs</p>
+                    <p className="text-[10px] text-deep-teal/40">Calming deep pressure</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Floating badge top right */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 1.4, type: "spring", stiffness: 200 }}
+                className="absolute -top-2 -right-2 sm:top-4 sm:right-0 bg-soft-pink/80 backdrop-blur-sm rounded-full px-3 py-1.5 shadow-md"
+              >
+                <p className="font-poppins text-[10px] font-semibold text-deep-teal">As seen on Today Show</p>
+              </motion.div>
             </div>
           </motion.div>
         </div>
@@ -155,14 +191,14 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden lg:block"
       >
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="w-6 h-10 rounded-full border-2 border-deep-teal/20 flex items-start justify-center pt-2"
+          className="w-5 h-9 rounded-full border-2 border-deep-teal/15 flex items-start justify-center pt-2"
         >
-          <div className="w-1 h-2.5 bg-teal/40 rounded-full" />
+          <div className="w-0.5 h-2 bg-teal/30 rounded-full" />
         </motion.div>
       </motion.div>
     </section>
