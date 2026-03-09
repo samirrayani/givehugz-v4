@@ -30,10 +30,10 @@ export function StatsBreak() {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: i * 0.15 }}
               >
-                <span className="font-petrona text-5xl sm:text-6xl font-bold text-teal block mb-1.5">
+                <span className="font-petrona text-5xl sm:text-6xl font-bold text-tan block mb-1.5">
                   {stat.number}
                 </span>
-                <span className="font-poppins text-xs text-white/40 tracking-wide">
+                <span className="font-poppins text-xs text-cream/70 tracking-wide">
                   {stat.label}
                 </span>
               </motion.div>

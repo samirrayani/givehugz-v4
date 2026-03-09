@@ -26,7 +26,7 @@ export function Mission() {
             initial={{ opacity: 0, y: 10 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
-            className="inline-block font-poppins text-[11px] font-semibold uppercase tracking-[0.25em] text-teal/60 mb-5"
+            className="inline-block font-poppins text-[11px] font-semibold uppercase tracking-[0.25em] text-tan mb-5"
           >
             Every Hugz holds something bigger
           </motion.span>
@@ -35,17 +35,17 @@ export function Mission() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-petrona text-4xl sm:text-5xl lg:text-[3.75rem] font-bold text-white leading-[1.05] mb-6"
+            className="font-petrona text-4xl sm:text-5xl lg:text-[3.75rem] font-bold text-cream leading-[1.05] mb-6"
           >
             Mental health{" "}
-            <span className="italic text-teal">is</span> health.
+            <span className="italic text-tan">is</span> health.
           </motion.h2>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-[15px] sm:text-base text-white/45 leading-[1.75] max-w-2xl mx-auto mb-8"
+            className="text-[15px] sm:text-base text-cream/70 leading-[1.75] max-w-2xl mx-auto mb-8"
           >
             10% of every Hugz purchase goes directly to the Inspiring Children Foundation, 
             supporting mental health resources for children who need them most. Because comfort 
@@ -59,19 +59,19 @@ export function Mission() {
             className="flex flex-col sm:flex-row items-center justify-center gap-8 mt-10"
           >
             <div className="text-center">
-              <span className="font-petrona text-4xl sm:text-5xl font-bold text-teal block">10%</span>
-              <span className="text-[11px] text-white/30 tracking-wide">Of every purchase donated</span>
+              <span className="font-petrona text-4xl sm:text-5xl font-bold text-tan block">10%</span>
+              <span className="text-[11px] text-cream/50 tracking-wide">Of every purchase donated</span>
             </div>
-            <div className="hidden sm:block w-px h-12 bg-white/10" />
+            <div className="hidden sm:block w-px h-12 bg-cream/15" />
             <div className="text-center flex flex-col items-center gap-2">
               <Image
                 src="/brand/icf-logo.png"
                 alt="Inspiring Children Foundation"
                 width={80}
                 height={50}
-                className="object-contain opacity-70"
+                className="object-contain brightness-150"
               />
-              <span className="text-[11px] text-white/30 tracking-wide">Inspiring Children Foundation</span>
+              <span className="text-[11px] text-cream/50 tracking-wide">Inspiring Children Foundation</span>
             </div>
           </motion.div>
 
@@ -83,7 +83,7 @@ export function Mission() {
           >
             <Link
               href="/mission"
-              className="inline-flex items-center gap-2 font-poppins text-sm font-medium text-teal hover:text-teal-light transition-colors"
+              className="inline-flex items-center gap-2 font-poppins text-sm font-medium text-tan hover:text-tan-light transition-colors"
             >
               Read our full mission
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">

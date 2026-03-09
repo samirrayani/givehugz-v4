@@ -32,7 +32,7 @@ export function Testimonials() {
   const isInView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <section ref={ref} className="py-20 lg:py-28 bg-white relative overflow-hidden">
+    <section ref={ref} className="py-20 lg:py-28 bg-cream relative overflow-hidden">
       {/* Decorative SVG */}
       <Image src="/brand/svg-15.svg" alt="" width={100} height={100} className="absolute top-10 right-8 opacity-[0.03] hidden lg:block" aria-hidden />
 
@@ -61,7 +61,7 @@ export function Testimonials() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-7"
           >
-            <div className="relative bg-cream rounded-3xl p-8 lg:p-10 h-full overflow-hidden">
+            <div className="relative bg-dusty-blue-pale rounded-3xl p-8 lg:p-10 h-full overflow-hidden">
               {/* Sleeping illustration as background accent */}
               <div className="absolute -bottom-4 -right-4 w-32 h-32 opacity-[0.08]">
                 <Image src="/brand/illust-sleeping.png" alt="" fill className="object-contain" aria-hidden="true" />

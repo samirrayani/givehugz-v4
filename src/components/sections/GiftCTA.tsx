@@ -10,7 +10,7 @@ export function GiftCTA() {
   const isInView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <section ref={ref} className="py-16 lg:py-24 bg-soft-pink/15 relative overflow-hidden">
+    <section ref={ref} className="py-16 lg:py-24 bg-dusty-blue-pale relative overflow-hidden">
       {/* Decorative illustration */}
       <div className="absolute -top-8 -right-8 w-[200px] h-[200px] opacity-[0.08] hidden lg:block">
         <Image src="/brand/illust-joyful.png" alt="" fill className="object-contain" aria-hidden="true" />
@@ -53,7 +53,7 @@ export function GiftCTA() {
               The gift of a hug they can{" "}
               <span className="italic text-teal">hold forever</span>
             </h2>
-            <p className="text-[15px] text-deep-teal/50 leading-[1.75] max-w-xl mx-auto lg:mx-0 mb-7">
+            <p className="text-[15px] text-deep-teal/60 leading-[1.75] max-w-xl mx-auto lg:mx-0 mb-7">
               Whether it&apos;s a friend going through a hard season, a child who needs comfort at night, 
               or someone who just deserves to feel held, a Hugz says what words can&apos;t.
             </p>
@@ -66,7 +66,7 @@ export function GiftCTA() {
               </Link>
               <Link
                 href="/collections/bundles"
-                className="inline-flex items-center gap-2 border-2 border-soft-pink text-deep-teal/70 font-poppins text-sm font-medium px-8 py-4 rounded-full hover:bg-soft-pink/20 transition-all duration-300"
+                className="inline-flex items-center gap-2 border-2 border-deep-teal/20 text-deep-teal/70 font-poppins text-sm font-medium px-8 py-4 rounded-full hover:bg-white/40 transition-all duration-300"
               >
                 Gift bundles
               </Link>

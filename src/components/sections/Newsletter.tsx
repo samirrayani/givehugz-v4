@@ -16,7 +16,7 @@ export function Newsletter() {
   };
 
   return (
-    <section ref={ref} className="relative py-16 lg:py-20 bg-cream overflow-hidden">
+    <section ref={ref} className="relative py-16 lg:py-20 bg-dusty-blue-pale overflow-hidden">
       {/* Newsletter background */}
       <div className="absolute inset-0 opacity-[0.06]">
         <Image
@@ -29,8 +29,8 @@ export function Newsletter() {
       </div>
 
       {/* Decorative SVGs */}
-      <Image src="/brand/svg-50.svg" alt="" width={80} height={80} className="absolute top-8 right-12 opacity-[0.05] hidden lg:block" aria-hidden />
-      <Image src="/brand/svg-51.svg" alt="" width={60} height={60} className="absolute bottom-8 left-10 opacity-[0.04] hidden lg:block" aria-hidden />
+      <Image src="/brand/svg-50.svg" alt="" width={80} height={80} className="absolute top-8 right-12 opacity-[0.06] hidden lg:block" aria-hidden />
+      <Image src="/brand/svg-51.svg" alt="" width={60} height={60} className="absolute bottom-8 left-10 opacity-[0.05] hidden lg:block" aria-hidden />
 
       <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <motion.div
@@ -41,7 +41,7 @@ export function Newsletter() {
           <h2 className="font-petrona text-2xl sm:text-3xl font-bold text-deep-teal mb-2">
             Stay close
           </h2>
-          <p className="text-sm text-deep-teal/40 mb-6">
+          <p className="text-sm text-deep-teal/50 mb-6">
             New companions, wellness tips, and exclusive offers. No spam, just warmth.
           </p>
 

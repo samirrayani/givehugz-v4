@@ -349,9 +349,9 @@ export function ProductPageClient({ product, related }: Props) {
                 {stats.map((stat) => (
                   <div key={stat.label} className="flex flex-col items-center gap-3">
                     <div className="w-10 h-10 flex items-center justify-center">
-                      <Image src={stat.icon} alt="" width={32} height={32} className="object-contain opacity-70" />
+                      <Image src={stat.icon} alt="" width={32} height={32} className="object-contain brightness-200" />
                     </div>
-                    <span className="font-poppins text-xs text-white/50 tracking-wide">{stat.label}</span>
+                    <span className="font-poppins text-xs text-cream/70 tracking-wide">{stat.label}</span>
                   </div>
                 ))}
               </div>
@@ -365,7 +365,7 @@ export function ProductPageClient({ product, related }: Props) {
 
       {/* ═══════════ 3. PRESS BADGES ═══════════ */}
       <ScrollReveal>
-        <div className="py-10 lg:py-14 bg-white">
+        <div className="py-10 lg:py-14 bg-dusty-blue-pale">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <p className="text-center text-[9px] font-semibold uppercase tracking-[0.35em] text-deep-teal/25 mb-6">
               Featured in
@@ -387,7 +387,7 @@ export function ProductPageClient({ product, related }: Props) {
       </ScrollReveal>
 
       {/* ═══════════ 4. BENEFITS SECTION ═══════════ */}
-      <section className="py-20 lg:py-28 bg-cream">
+      <section className="py-20 lg:py-28 bg-soft-pink-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="text-center mb-12 lg:mb-16">
             <span className="inline-block font-poppins text-[11px] font-semibold uppercase tracking-[0.25em] text-teal mb-4">
@@ -415,7 +415,7 @@ export function ProductPageClient({ product, related }: Props) {
       </section>
 
       {/* ═══════════ 5. WHY WEIGHTED ═══════════ */}
-      <section className="py-20 lg:py-28 bg-white relative overflow-hidden">
+      <section className="py-20 lg:py-28 bg-mint relative overflow-hidden">
         <Image src="/brand/svg-12.svg" alt="" width={100} height={100} className="absolute top-10 right-8 opacity-[0.04] hidden lg:block" aria-hidden />
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -546,7 +546,7 @@ export function ProductPageClient({ product, related }: Props) {
       </section>
 
       {/* ═══════════ 7. REVIEWS / TESTIMONIALS ═══════════ */}
-      <section className="py-20 lg:py-28 bg-white">
+      <section className="py-20 lg:py-28 bg-dusty-blue-pale">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal className="text-center mb-12">
             <span className="inline-block font-poppins text-[11px] font-semibold uppercase tracking-[0.25em] text-teal mb-4">

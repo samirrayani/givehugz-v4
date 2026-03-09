@@ -32,7 +32,7 @@ export function WhyWeighted() {
   const isInView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <section ref={ref} className="py-20 lg:py-28 bg-white relative overflow-hidden">
+    <section ref={ref} className="py-20 lg:py-28 bg-soft-pink-light relative overflow-hidden">
       {/* Decorative SVGs */}
       <Image src="/brand/svg-10.svg" alt="" width={100} height={100} className="absolute top-12 left-6 opacity-[0.04] hidden lg:block" aria-hidden />
       <Image src="/brand/svg-11.svg" alt="" width={80} height={80} className="absolute bottom-16 right-10 opacity-[0.04] hidden lg:block" aria-hidden />
@@ -88,7 +88,7 @@ export function WhyWeighted() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
-                  className="group bg-cream/60 rounded-2xl p-6 lg:p-7 hover:bg-cream transition-colors duration-300"
+                  className="group bg-white/70 rounded-2xl p-6 lg:p-7 hover:bg-white transition-colors duration-300"
                 >
                   <div className="w-14 h-14 rounded-xl bg-teal/8 flex items-center justify-center mb-4 group-hover:bg-teal/12 transition-colors overflow-hidden">
                     <Image
