@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  --color-teal: #108474;
+  --color-teal-light: #1a9e8b;
+  --color-teal-dark: #0a6358;
+  --color-deep-teal: #024a4a;
+  --color-cream: #fff8e1;
+  --color-cream-dark: #f5edcf;
+  --color-soft-pink: #ffcfc7;
+  --color-soft-pink-light: #ffe4df;
+  --color-mint: #edf5f5;
+  --color-coral: #ff2626;
+  --color-dark: #121212;
+
+  --font-petrona: "Petrona", serif;
+  --font-poppins: "Poppins", sans-serif;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-teal);
+  border-radius: 4px;
+}
+
+/* Mesh gradient keyframes */
+@keyframes mesh-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Organic blob animation */
+@keyframes blob-morph {
+  0%, 100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  25% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  50% {
+    border-radius: 50% 60% 30% 60% / 30% 40% 70% 60%;
+  }
+  75% {
+    border-radius: 60% 30% 60% 40% / 70% 50% 40% 60%;
+  }
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Press marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Gradient text helper */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-teal), var(--color-deep-teal));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
