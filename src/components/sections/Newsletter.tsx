@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
+import Image from "next/image";
 
 export function Newsletter() {
   const ref = useRef(null);
@@ -15,8 +16,23 @@ export function Newsletter() {
   };
 
   return (
-    <section ref={ref} className="py-16 lg:py-20 bg-cream">
-      <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section ref={ref} className="relative py-16 lg:py-20 bg-cream overflow-hidden">
+      {/* Newsletter background */}
+      <div className="absolute inset-0 opacity-[0.06]">
+        <Image
+          src="/brand/newsletter-desktop.png"
+          alt=""
+          fill
+          className="object-cover"
+          aria-hidden="true"
+        />
+      </div>
+
+      {/* Decorative SVGs */}
+      <Image src="/brand/svg-50.svg" alt="" width={80} height={80} className="absolute top-8 right-12 opacity-[0.05] hidden lg:block" aria-hidden />
+      <Image src="/brand/svg-51.svg" alt="" width={60} height={60} className="absolute bottom-8 left-10 opacity-[0.04] hidden lg:block" aria-hidden />
+
+      <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -35,9 +51,7 @@ export function Newsletter() {
               animate={{ opacity: 1, scale: 1 }}
               className="flex items-center justify-center gap-2 text-teal font-poppins text-sm font-medium"
             >
-              <svg width="20" height="20" viewBox="0 0 32 32" fill="none">
-                <path d="M16 28s-12-7.4-12-16C4 7.6 7.6 4 12 4c2.4 0 4.4 1.2 4 3.2C15.6 5.2 17.6 4 20 4c4.4 0 8 3.6 8 8 0 8.6-12 16-12 16z" fill="#108474"/>
-              </svg>
+              <Image src="/brand/heart.png" alt="" width={20} height={20} />
               Welcome to the family.
             </motion.div>
           ) : (

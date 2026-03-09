@@ -2,45 +2,28 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 const benefits = [
   {
-    title: "Calms anxiety",
+    title: "Stress & Anxiety Relief",
     description: "Deep pressure activates your parasympathetic nervous system, slowing heart rate and signaling safety to your brain.",
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#108474" strokeWidth="1.5">
-        <path d="M14 26s-10-6-10-13.5C4 7.4 7.4 4 11.5 4c2 0 3.7 1 2.5 2.5C12.8 5 15.5 4 17.5 4 21.6 4 25 7.4 25 12.5 25 20 14 26 14 26z" strokeLinecap="round"/>
-      </svg>
-    ),
+    icon: "/brand/icon-stress-anxiety.png",
   },
   {
-    title: "Better sleep",
+    title: "Better Sleep",
     description: "Like being gently held through the night. The weight tells your body it's time to rest.",
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#108474" strokeWidth="1.5">
-        <path d="M21 13.5A7.5 7.5 0 0113.5 6 9 9 0 1022 17a7.5 7.5 0 01-1-3.5z" strokeLinecap="round"/>
-      </svg>
-    ),
+    icon: "/brand/icon-better-sleep.png",
   },
   {
-    title: "Emotional comfort",
+    title: "Emotional Support",
     description: "Each Hugz has a name and personality because comfort isn't generic. The right companion was made for you.",
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#108474" strokeWidth="1.5">
-        <circle cx="14" cy="14" r="10"/>
-        <path d="M10 16s1.5 2 4 2 4-2 4-2M10.5 11h.01M17.5 11h.01" strokeLinecap="round"/>
-      </svg>
-    ),
+    icon: "/brand/icon-emotional-support.png",
   },
   {
-    title: "Portable calm",
-    description: "Not just for bedtime. Hold one during a meeting, on a flight, through a hard conversation.",
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#108474" strokeWidth="1.5">
-        <path d="M14 4v20M4 14h20M8 8l12 12M20 8L8 20" strokeLinecap="round" opacity="0.6"/>
-        <circle cx="14" cy="14" r="3" fill="#108474" opacity="0.2"/>
-      </svg>
-    ),
+    title: "Gift of Hugz",
+    description: "Give someone the feeling of being held, even when you can't be there. The perfect gift for anyone who needs comfort.",
+    icon: "/brand/icon-gift-of-hugz.png",
   },
 ];
 
@@ -49,10 +32,14 @@ export function WhyWeighted() {
   const isInView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <section ref={ref} className="py-20 lg:py-28 bg-white">
+    <section ref={ref} className="py-20 lg:py-28 bg-white relative overflow-hidden">
+      {/* Decorative SVGs */}
+      <Image src="/brand/svg-10.svg" alt="" width={100} height={100} className="absolute top-12 left-6 opacity-[0.04] hidden lg:block" aria-hidden />
+      <Image src="/brand/svg-11.svg" alt="" width={80} height={80} className="absolute bottom-16 right-10 opacity-[0.04] hidden lg:block" aria-hidden />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left: editorial content */}
+          {/* Left: editorial content with illustration */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -70,13 +57,29 @@ export function WhyWeighted() {
               The gentle, distributed weight of a Hugz mimics the sensation of being held, 
               triggering serotonin and melatonin release while reducing cortisol.
             </p>
-            <p className="text-[15px] text-deep-teal/50 leading-[1.75]">
+            <p className="text-[15px] text-deep-teal/50 leading-[1.75] mb-6">
               It&apos;s the same reason a weighted blanket helps you sleep, but shaped like 
               something you can hug, hold, and take anywhere.
             </p>
+
+            {/* Comfort illustration */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="relative w-48 h-48 mx-auto lg:mx-0"
+            >
+              <Image
+                src="/brand/illust-comfort.png"
+                alt="Comfort illustration"
+                fill
+                className="object-contain"
+                sizes="192px"
+              />
+            </motion.div>
           </motion.div>
 
-          {/* Right: benefit cards */}
+          {/* Right: benefit cards with real icons */}
           <div className="lg:col-span-7">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-5">
               {benefits.map((benefit, i) => (
@@ -87,8 +90,14 @@ export function WhyWeighted() {
                   transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
                   className="group bg-cream/60 rounded-2xl p-6 lg:p-7 hover:bg-cream transition-colors duration-300"
                 >
-                  <div className="w-11 h-11 rounded-xl bg-teal/8 flex items-center justify-center mb-4 group-hover:bg-teal/12 transition-colors">
-                    {benefit.icon}
+                  <div className="w-14 h-14 rounded-xl bg-teal/8 flex items-center justify-center mb-4 group-hover:bg-teal/12 transition-colors overflow-hidden">
+                    <Image
+                      src={benefit.icon}
+                      alt={benefit.title}
+                      width={40}
+                      height={40}
+                      className="object-contain"
+                    />
                   </div>
                   <h3 className="font-petrona text-lg font-semibold text-deep-teal mb-2">
                     {benefit.title}

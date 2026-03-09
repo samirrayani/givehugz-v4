@@ -2,13 +2,14 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 const pressLogos = [
-  { name: "Today Show", width: 120 },
-  { name: "USA Today", width: 110 },
-  { name: "Rolling Stone", width: 130 },
-  { name: "Cosmopolitan", width: 140 },
-  { name: "Yahoo", width: 90 },
+  { name: "Today Show", src: "/brand/press-today-show.png" },
+  { name: "USA Today", src: "/brand/press-usa-today.png" },
+  { name: "Rolling Stone", src: "/brand/press-rolling-stone.png" },
+  { name: "Cosmopolitan", src: "/brand/press-cosmopolitan.png" },
+  { name: "Yahoo", src: "/brand/press-yahoo.png" },
 ];
 
 export function PressMarquee() {
@@ -31,13 +32,15 @@ export function PressMarquee() {
             style={{ animation: "marquee 30s linear infinite" }}
           >
             {[...pressLogos, ...pressLogos].map((logo, i) => (
-              <span
-                key={i}
-                className="font-petrona text-lg sm:text-xl font-semibold text-deep-teal/20 italic select-none flex-shrink-0"
-                style={{ minWidth: logo.width }}
-              >
-                {logo.name}
-              </span>
+              <div key={i} className="flex-shrink-0 opacity-40 hover:opacity-70 transition-opacity">
+                <Image
+                  src={logo.src}
+                  alt={logo.name}
+                  width={120}
+                  height={40}
+                  className="h-7 sm:h-8 w-auto object-contain grayscale"
+                />
+              </div>
             ))}
           </div>
         </div>

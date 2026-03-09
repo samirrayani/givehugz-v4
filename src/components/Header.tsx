@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function Header() {
@@ -47,15 +48,14 @@ export function Header() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" className="transition-transform group-hover:scale-110">
-                <path d="M16 28s-12-7.4-12-16C4 7.6 7.6 4 12 4c2.4 0 4.4 1.2 4 3.2C15.6 5.2 17.6 4 20 4c4.4 0 8 3.6 8 8 0 8.6-12 16-12 16z" fill="#108474"/>
-                <circle cx="12" cy="11" r="1.5" fill="white" opacity="0.8"/>
-                <circle cx="20" cy="11" r="1.5" fill="white" opacity="0.8"/>
-                <path d="M13 15c0 0 1.5 2 3 2s3-2 3-2" stroke="white" strokeWidth="1.2" strokeLinecap="round" opacity="0.8"/>
-              </svg>
-              <span className="font-petrona text-xl font-bold text-deep-teal tracking-tight">
-                GiveHugz
-              </span>
+              <Image
+                src="/brand/hugz-logo.png"
+                alt="GiveHugz"
+                width={140}
+                height={40}
+                className="h-8 lg:h-10 w-auto transition-transform group-hover:scale-105"
+                priority
+              />
             </Link>
 
             {/* Desktop Nav */}

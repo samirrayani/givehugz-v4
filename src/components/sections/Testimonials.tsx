@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -31,7 +32,10 @@ export function Testimonials() {
   const isInView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <section ref={ref} className="py-20 lg:py-28 bg-white">
+    <section ref={ref} className="py-20 lg:py-28 bg-white relative overflow-hidden">
+      {/* Decorative SVG */}
+      <Image src="/brand/svg-15.svg" alt="" width={100} height={100} className="absolute top-10 right-8 opacity-[0.03] hidden lg:block" aria-hidden />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -42,7 +46,6 @@ export function Testimonials() {
           <span className="inline-block font-poppins text-[11px] font-semibold uppercase tracking-[0.25em] text-teal mb-4">
             Real people, real comfort
           </span>
-          {/* Signature Moment: oversized social proof */}
           <h2 className="font-petrona text-4xl sm:text-5xl lg:text-6xl xl:text-[4.5rem] font-bold text-deep-teal leading-[1.05]">
             50,000+ people sleep better{" "}
             <span className="italic text-teal">tonight</span>.
@@ -51,23 +54,23 @@ export function Testimonials() {
 
         {/* Staggered testimonial grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
-          {/* Featured testimonial — large */}
+          {/* Featured testimonial — large with lifestyle image */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-7"
           >
-            <div className="relative bg-cream rounded-3xl p-8 lg:p-10 h-full">
-              {/* Decorative heart */}
-              <svg width="36" height="36" viewBox="0 0 32 32" fill="none" className="absolute top-6 right-6 opacity-10">
-                <path d="M16 28s-12-7.4-12-16C4 7.6 7.6 4 12 4c2.4 0 4.4 1.2 4 3.2C15.6 5.2 17.6 4 20 4c4.4 0 8 3.6 8 8 0 8.6-12 16-12 16z" fill="#108474"/>
-              </svg>
+            <div className="relative bg-cream rounded-3xl p-8 lg:p-10 h-full overflow-hidden">
+              {/* Sleeping illustration as background accent */}
+              <div className="absolute -bottom-4 -right-4 w-32 h-32 opacity-[0.08]">
+                <Image src="/brand/illust-sleeping.png" alt="" fill className="object-contain" aria-hidden="true" />
+              </div>
 
-              <blockquote className="font-petrona text-xl sm:text-2xl lg:text-[1.65rem] text-deep-teal leading-[1.4] italic mb-6">
+              <blockquote className="font-petrona text-xl sm:text-2xl lg:text-[1.65rem] text-deep-teal leading-[1.4] italic mb-6 relative z-10">
                 &ldquo;{testimonials[0].quote}&rdquo;
               </blockquote>
-              <div>
+              <div className="relative z-10">
                 <span className="font-poppins text-sm font-semibold text-deep-teal block">
                   {testimonials[0].author}
                 </span>

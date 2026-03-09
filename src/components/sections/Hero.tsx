@@ -37,6 +37,9 @@ export function Hero() {
             borderRadius: "40% 60% 70% 30% / 40% 70% 30% 60%",
           }}
         />
+        {/* Decorative SVGs */}
+        <Image src="/brand/svg-00.svg" alt="" width={120} height={120} className="absolute top-[15%] right-[8%] opacity-[0.06] hidden lg:block" aria-hidden />
+        <Image src="/brand/svg-07.svg" alt="" width={80} height={80} className="absolute bottom-[20%] left-[3%] opacity-[0.05] hidden lg:block" aria-hidden />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -121,7 +124,7 @@ export function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Hero image — real product */}
+          {/* Hero image — real brand hero */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -138,19 +141,27 @@ export function Hero() {
               }}
             />
 
-            {/* Product image */}
-            <div
-              className="relative w-full max-w-[480px] aspect-square"
-              style={{ animation: "float 8s ease-in-out infinite" }}
-            >
-              <div className="absolute inset-4 rounded-[30%_70%_60%_40%/50%_40%_60%_50%] overflow-hidden shadow-2xl shadow-deep-teal/10">
+            {/* Desktop hero image */}
+            <div className="relative w-full max-w-[520px]" style={{ animation: "float 8s ease-in-out infinite" }}>
+              <div className="hidden sm:block relative aspect-[4/5] rounded-[30%_70%_60%_40%/50%_40%_60%_50%] overflow-hidden shadow-2xl shadow-deep-teal/10">
                 <Image
-                  src="https://cdn.shopify.com/s/files/1/0666/9130/1682/files/Horse_Tube_1fcceba2-0fc1-4732-8c41-154580c739a5.jpg?v=1771395856"
-                  alt="Chestnut the Horse — a weighted stuffed companion"
+                  src="/brand/hero-desktop.png"
+                  alt="GiveHugz weighted stuffed animals"
                   fill
                   className="object-cover"
                   priority
-                  sizes="(max-width: 768px) 90vw, 480px"
+                  sizes="(max-width: 1024px) 80vw, 520px"
+                />
+              </div>
+              {/* Mobile hero image */}
+              <div className="sm:hidden relative aspect-[4/5] rounded-[30%_70%_60%_40%/50%_40%_60%_50%] overflow-hidden shadow-2xl shadow-deep-teal/10">
+                <Image
+                  src="/brand/hero-mobile.png"
+                  alt="GiveHugz weighted stuffed animals"
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="100vw"
                 />
               </div>
 
@@ -162,9 +173,7 @@ export function Hero() {
                 className="absolute -bottom-2 -left-2 sm:bottom-4 sm:left-0 bg-white rounded-2xl px-4 py-3 shadow-lg shadow-deep-teal/5"
               >
                 <div className="flex items-center gap-2">
-                  <svg width="20" height="20" viewBox="0 0 32 32" fill="#108474">
-                    <path d="M16 28s-12-7.4-12-16C4 7.6 7.6 4 12 4c2.4 0 4.4 1.2 4 3.2C15.6 5.2 17.6 4 20 4c4.4 0 8 3.6 8 8 0 8.6-12 16-12 16z"/>
-                  </svg>
+                  <Image src="/brand/heart.png" alt="" width={20} height={20} />
                   <div>
                     <p className="font-petrona text-xs font-semibold text-deep-teal">Weighted 2 lbs</p>
                     <p className="text-[10px] text-deep-teal/40">Calming deep pressure</p>

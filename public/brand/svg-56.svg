@@ -1,0 +1,8 @@
+<svg width="0" height="0" viewBox="0 0 200 200">
+  <defs>
+    <clipPath id="clip-sold-out" clipPathUnits="objectBoundingBox">
+      <path clip-rule="evenodd" transform="scale(0.005,0.005)" d="M174.123 50H25.877C25.877 61.8227 16.5877 71.4778 5 71.4778V128.522C16.4919 128.522 25.877 138.079 25.877 150H174.123C174.123 138.177 183.412 128.522 195 128.522V71.4778C183.412 71.4778 174.123 61.8227 174.123 50Z" fill="black"/>
+    </clipPath>
+    <path id="outline-sold-out" vector-effect="non-scaling-stroke"  d="M174.123 50H25.877C25.877 61.8227 16.5877 71.4778 5 71.4778V128.522C16.4919 128.522 25.877 138.079 25.877 150H174.123C174.123 138.177 183.412 128.522 195 128.522V71.4778C183.412 71.4778 174.123 61.8227 174.123 50Z" />
+  </defs>
+</svg>

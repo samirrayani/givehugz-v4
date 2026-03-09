@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 export function Mission() {
@@ -16,13 +17,9 @@ export function Mission() {
       </svg>
 
       <div className="bg-deep-teal py-16 lg:py-24 relative">
-        {/* Decorative hug arms */}
-        <div className="absolute top-1/2 left-0 -translate-y-1/2 opacity-[0.04]">
-          <svg width="250" height="350" viewBox="0 0 300 400" fill="none">
-            <path d="M280,200 C280,100 200,20 100,20 C50,20 20,60 20,120 C20,180 60,240 100,280" stroke="white" strokeWidth="3" fill="none"/>
-            <path d="M280,200 C280,300 200,380 100,380 C50,380 20,340 20,280 C20,220 60,160 100,120" stroke="white" strokeWidth="3" fill="none"/>
-          </svg>
-        </div>
+        {/* Decorative SVGs */}
+        <Image src="/brand/svg-13.svg" alt="" width={120} height={120} className="absolute top-10 left-6 opacity-[0.06] hidden lg:block" aria-hidden />
+        <Image src="/brand/svg-14.svg" alt="" width={100} height={100} className="absolute bottom-10 right-8 opacity-[0.05] hidden lg:block" aria-hidden />
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.span
@@ -66,8 +63,14 @@ export function Mission() {
               <span className="text-[11px] text-white/30 tracking-wide">Of every purchase donated</span>
             </div>
             <div className="hidden sm:block w-px h-12 bg-white/10" />
-            <div className="text-center">
-              <span className="font-petrona text-4xl sm:text-5xl font-bold text-teal block">ICF</span>
+            <div className="text-center flex flex-col items-center gap-2">
+              <Image
+                src="/brand/icf-logo.png"
+                alt="Inspiring Children Foundation"
+                width={80}
+                height={50}
+                className="object-contain opacity-70"
+              />
               <span className="text-[11px] text-white/30 tracking-wide">Inspiring Children Foundation</span>
             </div>
           </motion.div>

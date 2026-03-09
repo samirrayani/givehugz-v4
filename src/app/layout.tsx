@@ -22,6 +22,13 @@ export const metadata: Metadata = {
   title: "GiveHugz — Weighted Companions for Calm",
   description:
     "Weighted stuffed animals designed for anxiety relief, better sleep, and emotional comfort. Each Hugz is a 2-pound companion that holds you back.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon.png", type: "image/png" },
+    ],
+    apple: "/favicon.png",
+  },
   openGraph: {
     title: "GiveHugz — Weighted Companions for Calm",
     description:
@@ -29,6 +36,7 @@ export const metadata: Metadata = {
     url: "https://givehugz-v4.treehaus.site",
     siteName: "GiveHugz",
     type: "website",
+    images: [{ url: "/og-image.png" }],
   },
 };
 
